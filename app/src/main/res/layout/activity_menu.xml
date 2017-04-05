@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:background="@drawable/fundo_cinza">
+    <TextView
+        android:text="2x2 button grid"
+        android:textSize="32dip"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:text="Nova"
+            android:layout_weight="0.47"
+            android:id="@+id/button"
+            android:background="@drawable/btn_fundo" />
+
+        <Space
+            android:layout_marginLeft="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
+
+        <Button
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:text="Continua"
+            android:layout_weight="0.47"
+            android:background="@drawable/btn_fundo" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:orientation="horizontal">
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <Button
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:text="Expota"
+            android:layout_weight="0.47"
+            android:background="@drawable/btn_fundo" />
+        <Space
+            android:layout_marginLeft="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
+        <Button
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:text="Exclui"
+            android:layout_weight="0.47"
+            android:background="@drawable/btn_fundo" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+</GridLayout>
