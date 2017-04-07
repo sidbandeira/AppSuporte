@@ -25,7 +25,8 @@
             android:id="@+id/button"
             android:background="@drawable/btn_fundo"
             android:textAlignment="center"
-            android:baselineAlignBottom="true" />
+            android:baselineAlignBottom="true"
+            android:onClick="btnNova"/>
 
         <Space
             android:layout_marginLeft="6dp"
