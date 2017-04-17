@@ -16,9 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".CadastraColetaActivity" />
-        <activity android:name=".ColetaActivity"></activity>
+        <activity android:name=".MenuActivity" android:label="Menu" />
+        <activity android:name=".CadastraColetaActivity" android:label="Cadastrar Coleta" />
+        <activity android:name=".ColetaActivity" android:label="Incluir Produto"></activity>
     </application>
 
 </manifest>

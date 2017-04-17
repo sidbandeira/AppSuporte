@@ -46,15 +46,16 @@
             android:text="Confirmar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnConfirma"
-            android:layout_weight="1"/>
+            android:id="@+id/btConfirma"
+            android:layout_weight="1"
+            android:onClick="btCofirma"/>
 
         <Button
             android:text="Cancelar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/btnConfirma"
-            android:id="@+id/btnCancela"
+            android:id="@+id/btCancela"
             android:layout_weight="1"/>
     </LinearLayout>
 

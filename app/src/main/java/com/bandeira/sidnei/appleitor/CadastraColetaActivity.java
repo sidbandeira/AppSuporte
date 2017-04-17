@@ -21,5 +21,8 @@ public class CadastraColetaActivity extends AppCompatActivity {
     }
 
 
-
+    public void btCofirma(View view) {
+        Intent it = new Intent(this, ColetaActivity.class);
+        startActivity(it);
+    }
 }
