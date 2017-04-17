@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".CadastraColetaActivity"></activity>
+        <activity android:name=".CadastraColetaActivity" />
+        <activity android:name=".ColetaActivity"></activity>
     </application>
 
 </manifest>

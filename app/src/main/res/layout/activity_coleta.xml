@@ -1,31 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_cadastra_coleta"
+    android:id="@+id/activity_coleta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.bandeira.sidnei.appleitor.CadastraColetaActivity"
+    tools:context="com.bandeira.sidnei.appleitor.ColetaActivity"
     android:orientation="vertical"
     android:baselineAligned="false">
 
     <LinearLayout
+        android:id="@+id/lnBarras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1">
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="285dp"
             android:layout_height="40dp"
             android:inputType="text"
             android:ems="10"
             android:layout_marginTop="19dp"
             android:id="@+id/edtBarras"
-            android:hint="  Descrição"
+            android:hint="  Código de Barras"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            style="@android:style/Widget.Holo.Light.EditText"
+            android:height="30dp"
+            android:background="@drawable/contorno" />
+
+        <Button
+            android:layout_marginTop="19dp"
+            android:layout_width="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="32dp"
+            android:id="@+id/btBarras"
+            android:background="@drawable/barras"
+            android:onClick="btBarras"
+            android:layout_weight="0.68"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnQdte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/edtQtde"
+            android:hint="  Digite a quantidade"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             style="@android:style/Widget.Holo.Light.EditText"
@@ -34,19 +67,19 @@
 
     </LinearLayout>
 
-
-
     <LinearLayout
+        android:id="@+id/lnBotoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <Button
             android:text="Confirmar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnConfirma"
+            android:gravity="center_horizontal"
             android:layout_weight="1"/>
 
         <Button
@@ -55,6 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/btnConfirma"
             android:id="@+id/btnCancela"
+            android:gravity="center_horizontal"
             android:layout_weight="1"/>
     </LinearLayout>
 
