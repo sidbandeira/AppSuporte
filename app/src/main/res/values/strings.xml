@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AppLeitor</string>
+
+    <string-array name="spdelimitador">
+        <item>Selecione o delimitador</item>
+        <item>,</item>
+        <item>;</item>
+        <item>/</item>
+        <item>|</item>
+    </string-array>
 </resources>

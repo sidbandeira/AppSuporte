@@ -15,7 +15,6 @@ import google.zxing.integration.android.IntentResult;
 public class CadastraColetaActivity extends AppCompatActivity {
     public static String delimitador = "";
     private EditText edtDescricao;
-    //private EditText edtDelimitador;
     private Button btConfirma;
     private Button btCancela;
     private Spinner spDelimitador;
@@ -25,17 +24,12 @@ public class CadastraColetaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastra_coleta);
 
         edtDescricao = (EditText)findViewById(R.id.edtDescricao);
-        //edtDelimitador = (EditText)findViewById(R.id.edtDelimitador);
         btConfirma = (Button)findViewById(R.id.btConfirma);
         btCancela = (Button)findViewById(R.id.btCancela);
         spDelimitador = (Spinner) findViewById(R.id.spDelimitador);
-
     }
 
-
     public void btCofirma(View view) {
-
-        //delimitador = edtDelimitador.getText().toString();
         delimitador = (String)spDelimitador.getSelectedItem();
         Toast.makeText(this,delimitador,Toast.LENGTH_SHORT).show();
         Intent it = new Intent(this, ColetaActivity.class);

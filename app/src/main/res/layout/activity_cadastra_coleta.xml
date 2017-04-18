@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:weightSum="1">
 
         <EditText
@@ -24,13 +24,21 @@
             android:inputType="text"
             android:ems="10"
             android:layout_marginTop="19dp"
-            android:id="@+id/edtBarras"
+            android:id="@+id/edtDescricao"
             android:hint="  Descrição"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             style="@android:style/Widget.Holo.Light.EditText"
             android:height="30dp"
             android:background="@drawable/contorno" />
+
+        <Spinner
+            android:id="@+id/spDelimitador"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:entries="@array/spdelimitador"
+            android:background="@drawable/contorno"/>
 
     </LinearLayout>
 
