@@ -8,17 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PrincipalActivity">
+        <activity android:name=".PrincipalActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".MenuActivity" android:label="Menu" />
-        <activity android:name=".CadastraColetaActivity" android:label="Cadastrar Coleta" />
-        <activity android:name=".ColetaActivity" android:label="Incluir Produto"></activity>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MenuActivity" android:label="Menu" android:screenOrientation="portrait"/>
+        <activity android:name=".CadastraColetaActivity" android:label="Cadastrar Coleta" android:screenOrientation="portrait"/>
+        <activity android:name=".ColetaActivity" android:label="Incluir Produto" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

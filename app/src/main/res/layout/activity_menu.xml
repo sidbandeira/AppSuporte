@@ -18,28 +18,32 @@
             android:layout_weight="1" />
 
         <Button
-            android:layout_width="104dp"
-            android:layout_height="104dp"
+            android:layout_width="100dp"
+            android:layout_height="124dp"
             android:text="Nova"
             android:layout_weight="0.47"
             android:id="@+id/button"
-            android:background="@drawable/btn_fundo"
             android:textAlignment="center"
+            android:onClick="btnNova"
             android:baselineAlignBottom="true"
-            android:onClick="btnNova"/>
+            android:gravity="bottom|center_vertical|center_horizontal"
+            android:background="@drawable/btnnovo"
+            android:textSize="18sp" />
 
         <Space
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0" />
 
         <Button
-            android:layout_width="104dp"
-            android:layout_height="104dp"
+            android:layout_width="100dp"
+            android:layout_height="124dp"
             android:text="Continua"
             android:layout_weight="0.47"
-            android:background="@drawable/btn_fundo" />
+            android:background="@drawable/btncoleta"
+            android:gravity="bottom|center_vertical|center_horizontal"
+            android:textSize="18sp" />
 
         <Space
             android:layout_width="wrap_content"
@@ -48,7 +52,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="185dp"
         android:orientation="horizontal">
@@ -57,22 +61,26 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
         <Button
-            android:layout_width="104dp"
-            android:layout_height="104dp"
+            android:layout_width="100dp"
+            android:layout_height="124dp"
             android:text="Exporta"
             android:layout_weight="0.47"
-            android:background="@drawable/btn_fundo" />
+            android:background="@drawable/btnexportar"
+            android:gravity="bottom|center_vertical|center_horizontal"
+            android:textSize="18sp" />
         <Space
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0" />
         <Button
-            android:layout_width="104dp"
-            android:layout_height="104dp"
+            android:layout_width="100dp"
+            android:layout_height="124dp"
             android:text="Exclui"
             android:layout_weight="0.47"
-            android:background="@drawable/btn_fundo" />
+            android:background="@drawable/btnexcluir"
+            android:gravity="bottom|center_vertical|center_horizontal"
+            android:textSize="18sp" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
