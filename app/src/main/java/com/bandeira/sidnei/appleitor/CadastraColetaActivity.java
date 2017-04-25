@@ -36,6 +36,8 @@ public class CadastraColetaActivity extends AppCompatActivity {
         btConfirma = (Button)findViewById(R.id.btConfirma);
         btCancela = (Button)findViewById(R.id.btCancela);
         spDelimitador = (Spinner) findViewById(R.id.spDelimitador);
+
+
     }
 
     public void btCofirma(View view) throws FileNotFoundException {
@@ -54,6 +56,11 @@ public class CadastraColetaActivity extends AppCompatActivity {
             salvararquivo();
 //            Intent it = new Intent(this, ColetaActivity.class);
 //            startActivity(it);
+
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("myResult", "20");
+            setResult(RESULT_OK, resultIntent);
+            finish();
         }
     }
 
@@ -69,17 +76,18 @@ public class CadastraColetaActivity extends AppCompatActivity {
             arq = new File(Environment.getExternalStorageDirectory(), lstrNomeArq);
             FileOutputStream fos;
             String coleta = "";
-            for(int i = 0; i < 10; i++) {
-                coleta += edtDescricao.getText() + delimitador + i + " \n";
-            }
-
+//            for(int i = 0; i < 10; i++) {
+//                coleta += edtDescricao.getText() + delimitador + i + " \n";
+//            }
+//
             dados = coleta.toString().getBytes();
 
             fos = new FileOutputStream(arq);
             fos.write(dados );
             fos.flush();
             fos.close();
-            Mensagem("Texto Salvo com sucesso!");
+            //Mensagem("Texto Salvo com sucesso!");
+
             //Listar();
         }
         catch (Exception e)
