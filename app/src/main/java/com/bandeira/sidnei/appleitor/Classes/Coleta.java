@@ -1,0 +1,33 @@
+package com.bandeira.sidnei.appleitor.Classes;
+
+public class Coleta {
+    public long _id ;
+    public String coletadescricao;
+
+    public String getcoletadescricao() {
+        return coletadescricao;
+    }
+
+    public void setcoletadescricao(String coletadescricao) {
+        this.coletadescricao = coletadescricao;
+    }
+
+    public long get_id() {
+        return _id;
+    }
+
+    public void set_id(int _id) {
+        this._id = _id;
+    }
+
+    public Coleta(){
+
+    }
+
+    public Coleta(long _id, String coletadescricao){
+        this._id = _id;
+        this.coletadescricao = coletadescricao;
+    }
+
+
+}

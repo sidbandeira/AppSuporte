@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.bandeira.sidnei.appleitor.Classes.Coleta;
+import com.bandeira.sidnei.appleitor.Repositorio.ColetaRepositorio;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -27,7 +30,7 @@ public class CadastraColetaActivity extends AppCompatActivity {
     private Button btCancela;
     private Spinner spDelimitador;
     private ArrayList<String> Arquivos = new ArrayList<String>();
-    @Override
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_coleta);
@@ -37,32 +40,42 @@ public class CadastraColetaActivity extends AppCompatActivity {
         btCancela = (Button)findViewById(R.id.btCancela);
         spDelimitador = (Spinner) findViewById(R.id.spDelimitador);
 
-
     }
 
     public void btCofirma(View view) throws FileNotFoundException {
         delimitador = (String)spDelimitador.getSelectedItem();
         nomeArquivo = edtDescricao.getText().toString();
 
-        if (nomeArquivo.isEmpty()){
-            Toast.makeText(this,"Escolha uma descrição para o arquivo de coleta.",Toast.LENGTH_SHORT).show();
-            edtDescricao.hasFocus();
-        }
+//        if (nomeArquivo.isEmpty()){
+//            Toast.makeText(this,"Escolha uma descrição para o arquivo de coleta.",Toast.LENGTH_SHORT).show();
+//            edtDescricao.hasFocus();
+//        }
+//
+//        if (delimitador.contains("Selecione")){
+//            Toast.makeText(this,"Escolha um delimitador",Toast.LENGTH_SHORT).show();
+//            spDelimitador.hasFocus();
+//        }else{
+//            salvararquivo();
+////            Intent it = new Intent(this, ColetaActivity.class);
+////            startActivity(it);
+//
+//            Intent resultIntent = new Intent();
+//            resultIntent.putExtra("myResult", "20");
+//            setResult(RESULT_OK, resultIntent);
+//            finish();
+//        }
 
-        if (delimitador.contains("Selecione")){
-            Toast.makeText(this,"Escolha um delimitador",Toast.LENGTH_SHORT).show();
-            spDelimitador.hasFocus();
-        }else{
-            salvararquivo();
-//            Intent it = new Intent(this, ColetaActivity.class);
-//            startActivity(it);
-
-            Intent resultIntent = new Intent();
-            resultIntent.putExtra("myResult", "20");
-            setResult(RESULT_OK, resultIntent);
-            finish();
-        }
+        gravarColeta();
     }
+
+    private void gravarColeta(){
+        ColetaRepositorio rep = new ColetaRepositorio(this);
+        Coleta mColeta = new Coleta();
+        mColeta.coletadescricao = nomeArquivo;
+        rep.salvar(mColeta);
+
+    }
+
 
 
     private void salvararquivo(){
