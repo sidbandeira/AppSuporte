@@ -1,11 +1,10 @@
 package com.bandeira.sidnei.appleitor;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -19,9 +18,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-import google.zxing.integration.android.IntentIntegrator;
-import google.zxing.integration.android.IntentResult;
-
 public class CadastraColetaActivity extends AppCompatActivity {
     public static String delimitador = "";
     public static String nomeArquivo = "";
@@ -30,6 +26,7 @@ public class CadastraColetaActivity extends AppCompatActivity {
     private Button btCancela;
     private Spinner spDelimitador;
     private ArrayList<String> Arquivos = new ArrayList<String>();
+
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +43,20 @@ public class CadastraColetaActivity extends AppCompatActivity {
         delimitador = (String)spDelimitador.getSelectedItem();
         nomeArquivo = edtDescricao.getText().toString();
 
-//        if (nomeArquivo.isEmpty()){
-//            Toast.makeText(this,"Escolha uma descrição para o arquivo de coleta.",Toast.LENGTH_SHORT).show();
-//            edtDescricao.hasFocus();
-//        }
-//
+        if (nomeArquivo.isEmpty()){
+            Toast.makeText(this,"Escolha uma descrição para o arquivo de coleta.",Toast.LENGTH_SHORT).show();
+            edtDescricao.hasFocus();
+        }else{
+            gravarColeta();
+            Intent it = new Intent(this, ColetaActivity.class);
+            startActivity(it);
+
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("myResult", "20");
+            setResult(RESULT_OK, resultIntent);
+            finish();
+        }
+
 //        if (delimitador.contains("Selecione")){
 //            Toast.makeText(this,"Escolha um delimitador",Toast.LENGTH_SHORT).show();
 //            spDelimitador.hasFocus();
@@ -64,16 +70,17 @@ public class CadastraColetaActivity extends AppCompatActivity {
 //            setResult(RESULT_OK, resultIntent);
 //            finish();
 //        }
-
-        gravarColeta();
     }
 
     private void gravarColeta(){
         ColetaRepositorio rep = new ColetaRepositorio(this);
-        Coleta mColeta = new Coleta();
-        mColeta.coletadescricao = nomeArquivo;
-        rep.salvar(mColeta);
-
+        Coleta novaColeta = new Coleta();
+        novaColeta.coletadescricao = nomeArquivo;
+        rep.salvar(novaColeta);
+        if (novaColeta.get_id() <= 0) {
+            Toast.makeText(getApplicationContext(), "Erro ao gravar a coleta!", Toast.LENGTH_SHORT).show();
+            edtDescricao.hasFocus();
+        }
     }
 
 
