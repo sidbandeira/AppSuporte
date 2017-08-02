@@ -29,6 +29,4 @@ public class ColetaItemRepositorio {
         db.close();
         return id;
     }
-
-
 }
