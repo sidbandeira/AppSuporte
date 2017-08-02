@@ -20,14 +20,15 @@ import java.util.ArrayList;
 
 public class CadastraColetaActivity extends AppCompatActivity {
     public static String delimitador = "";
-    public static String nomeArquivo = "";
+    public static String nomeColeta = "";
+    private Long codColeta ;
     private EditText edtDescricao;
     private Button btConfirma;
     private Button btCancela;
     private Spinner spDelimitador;
     private ArrayList<String> Arquivos = new ArrayList<String>();
 
-        @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_coleta);
@@ -41,14 +42,15 @@ public class CadastraColetaActivity extends AppCompatActivity {
 
     public void btCofirma(View view) throws FileNotFoundException {
         delimitador = (String)spDelimitador.getSelectedItem();
-        nomeArquivo = edtDescricao.getText().toString();
+        nomeColeta = edtDescricao.getText().toString();
 
-        if (nomeArquivo.isEmpty()){
+        if (nomeColeta.isEmpty()){
             Toast.makeText(this,"Escolha uma descrição para o arquivo de coleta.",Toast.LENGTH_SHORT).show();
             edtDescricao.hasFocus();
         }else{
             gravarColeta();
             Intent it = new Intent(this, ColetaActivity.class);
+            it.putExtra("codigoColeta", codColeta);
             startActivity(it);
 
             Intent resultIntent = new Intent();
@@ -75,11 +77,13 @@ public class CadastraColetaActivity extends AppCompatActivity {
     private void gravarColeta(){
         ColetaRepositorio rep = new ColetaRepositorio(this);
         Coleta novaColeta = new Coleta();
-        novaColeta.coletadescricao = nomeArquivo;
+        novaColeta.coletadescricao = nomeColeta;
         rep.salvar(novaColeta);
         if (novaColeta.get_id() <= 0) {
             Toast.makeText(getApplicationContext(), "Erro ao gravar a coleta!", Toast.LENGTH_SHORT).show();
             edtDescricao.hasFocus();
+        }else{
+            codColeta = novaColeta.get_id();
         }
     }
 
