@@ -50,13 +50,13 @@ public class CadastraColetaActivity extends AppCompatActivity {
         }else{
             gravarColeta();
             Intent it = new Intent(this, ColetaActivity.class);
-            it.putExtra("codigoColeta", codColeta);
+            it.putExtra("codigoColeta", String.valueOf( codColeta));
             startActivity(it);
 
-            Intent resultIntent = new Intent();
-            resultIntent.putExtra("myResult", "20");
-            setResult(RESULT_OK, resultIntent);
-            finish();
+//            Intent resultIntent = new Intent();
+//            resultIntent.putExtra("myResult", "20");
+//            setResult(RESULT_OK, resultIntent);
+//            finish();
         }
 
 //        if (delimitador.contains("Selecione")){

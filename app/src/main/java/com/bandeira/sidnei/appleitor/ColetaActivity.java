@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.bandeira.sidnei.appleitor.Classes.ColetaItem;
-import com.bandeira.sidnei.appleitor.Repositorio.ColetaRepositorio;
+import com.bandeira.sidnei.appleitor.Repositorio.ColetaItemRepositorio;
 
 import google.zxing.integration.android.IntentIntegrator;
 import google.zxing.integration.android.IntentResult;
@@ -26,8 +26,8 @@ public class ColetaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coleta);
-        Intent itColeta = getIntent();
-        codColeta = Long.parseLong(itColeta.getStringExtra("codigoColeta"));
+        Intent it = getIntent();
+        codColeta = Long.parseLong(it.getStringExtra("codigoColeta"));
         btBarras = (Button)findViewById(R.id.btBarras);
         edtBarras = (EditText) findViewById(R.id.edtBarras);
         edtQtde = (EditText) findViewById(R.id.edtQtde);
@@ -70,25 +70,31 @@ public class ColetaActivity extends AppCompatActivity {
             edtQtde.hasFocus();
         }
 
-
+        gravarColetaItem();
 
     }
 
-    private void gravarColeta(){
-        ColetaRepositorio rep = new ColetaRepositorio(this);
+    private void gravarColetaItem(){
+        ColetaItemRepositorio rep = new ColetaItemRepositorio(this);
         ColetaItem novoItem = new ColetaItem();
         novoItem.idcoleta = codColeta;
         novoItem.codbarras = codigoBarras;
         novoItem.quantidade = qtde;
 
-        //rep.salvar(novoItem);
+        rep.salvar(novoItem);
         if (novoItem.get_id() <= 0) {
             Toast.makeText(getApplicationContext(), "Erro ao gravar item coletado!", Toast.LENGTH_SHORT).show();
             edtBarras.hasFocus();
         }else{
-            // limpar a tela
+            Toast.makeText(getApplicationContext(),String.valueOf(novoItem.get_id()) , Toast.LENGTH_SHORT).show();
+            novo();
             edtBarras.hasFocus();
         }
+    }
+
+    private void novo(){
+        edtBarras.setText("");
+        edtQtde.setText("");
     }
 
 }
