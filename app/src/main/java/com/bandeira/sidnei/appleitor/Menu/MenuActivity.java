@@ -27,4 +27,9 @@ public class MenuActivity extends AppCompatActivity {
             Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void btnContinua(View view) {
+        Intent it = new Intent(this, CadastraColetaActivity.class);
+        startActivityForResult(it,20);
+    }
 }

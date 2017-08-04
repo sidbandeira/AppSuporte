@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtCodColeta"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:text="Cod."
+        android:textColor="#ffa602"
+        android:layout_marginLeft="4dp"
+        android:layout_weight="1.07" />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:text="Descricao da Coleta"
+        android:textColor="#ffa602"
+        android:layout_marginLeft="4dp" />
+
+
+
+</LinearLayout>

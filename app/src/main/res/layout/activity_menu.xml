@@ -43,7 +43,8 @@
             android:layout_weight="0.47"
             android:background="@drawable/btncoleta"
             android:gravity="bottom|center_vertical|center_horizontal"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:onClick="btnContinua"/>
 
         <Space
             android:layout_width="wrap_content"
