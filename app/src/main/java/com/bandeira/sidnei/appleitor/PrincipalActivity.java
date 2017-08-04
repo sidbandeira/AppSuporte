@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.bandeira.sidnei.appleitor.Menu.MenuActivity;
+
 public class PrincipalActivity extends AppCompatActivity {
 
     @Override

@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".MenuActivity" android:label="Menu" android:screenOrientation="portrait"/>
+        <activity android:name=".Menu.MenuActivity" android:label="Menu" android:screenOrientation="portrait"/>
         <activity android:name=".CadastraColetaActivity" android:label="Cadastrar Coleta" android:screenOrientation="portrait"/>
         <activity android:name=".ColetaActivity" android:label="Incluir Produto" android:screenOrientation="portrait"></activity>
     </application>

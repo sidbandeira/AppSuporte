@@ -1,11 +1,13 @@
-package com.bandeira.sidnei.appleitor;
+package com.bandeira.sidnei.appleitor.Menu;
 
 import android.content.Intent;
-import android.hardware.camera2.TotalCaptureResult;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
+
+import com.bandeira.sidnei.appleitor.CadastraColetaActivity;
+import com.bandeira.sidnei.appleitor.R;
 
 public class MenuActivity extends AppCompatActivity {
 
