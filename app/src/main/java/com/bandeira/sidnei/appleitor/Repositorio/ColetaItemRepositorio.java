@@ -24,7 +24,7 @@ public class ColetaItemRepositorio {
         ContentValues cv = new ContentValues();
         cv.put(ColetaSQLHelper.COLUNA_CODBARRA, item.codbarras);
         cv.put(ColetaSQLHelper.COLUNA_QUANTIDADE, item.quantidade);
-        cv.put(ColetaSQLHelper.COLUNA_IDCOLETA, item.idcoleta);
+        cv.put(ColetaSQLHelper.COLUNA_ITEMIDCOLETA, item.idcoleta);
 
         long id = db.insert(ColetaSQLHelper.TABELA_COLETAITEM, null, cv);
         if (id != -1) {
@@ -40,7 +40,7 @@ public class ColetaItemRepositorio {
         cv.put(ColetaSQLHelper.COLUNA_COLETAITEMID, item._id);
         cv.put(ColetaSQLHelper.COLUNA_CODBARRA, item.codbarras);
         cv.put(ColetaSQLHelper.COLUNA_QUANTIDADE, item.quantidade);
-        cv.put(ColetaSQLHelper.COLUNA_IDCOLETA, item.idcoleta);
+        cv.put(ColetaSQLHelper.COLUNA_ITEMIDCOLETA, item.idcoleta);
         int linhasAfetadas = db.update(
                 ColetaSQLHelper.TABELA_COLETAITEM,
                 cv,

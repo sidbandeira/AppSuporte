@@ -34,12 +34,12 @@ public class ColetaRepositorio {
     private int atualizar(Coleta coleta) {
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(ColetaSQLHelper.COLUNA_IDCOLETA, coleta._id);
+        cv.put(ColetaSQLHelper.COLUNA_ITEMIDCOLETA, coleta._id);
         cv.put(ColetaSQLHelper.COLUNA_COLETADESCRICAO, coleta.coletadescricao);
         int linhasAfetadas = db.update(
                 ColetaSQLHelper.TABELA_COLETA,
                 cv,
-                ColetaSQLHelper.COLUNA_IDCOLETA +" = ?",
+                ColetaSQLHelper.COLUNA_COLETAID +" = ?",
                 new String[]{ String.valueOf(coleta._id)});
         db.close();
         return linhasAfetadas;
@@ -57,7 +57,7 @@ public class ColetaRepositorio {
         SQLiteDatabase db = helper.getWritableDatabase();
         int linhasAfetadas = db.delete(
                 ColetaSQLHelper.TABELA_COLETA,
-                ColetaSQLHelper.COLUNA_IDCOLETA +" = ?",
+                ColetaSQLHelper.COLUNA_ITEMIDCOLETA +" = ?",
                 new String[]{ String.valueOf(coleta._id)});
         db.close();
         return linhasAfetadas;
@@ -71,16 +71,12 @@ public class ColetaRepositorio {
             sql += " WHERE "+ ColetaSQLHelper.COLUNA_COLETADESCRICAO +" LIKE ?";
             argumentos = new String[]{ filtro };
         }
-        sql += " ORDER BY "+ ColetaSQLHelper.COLUNA_COLETADESCRICAO;
+        sql += " ORDER BY "+ ColetaSQLHelper.COLUNA_COLETAID;
         Cursor cursor = db.rawQuery(sql, argumentos);
         List<Coleta> coletas = new ArrayList<Coleta>();
         while (cursor.moveToNext()) {
-            long id = cursor.getLong(
-                    cursor.getColumnIndex(
-                            ColetaSQLHelper.COLUNA_IDCOLETA));
-            String coletaDescricao = cursor.getString(
-                    cursor.getColumnIndex(
-                            ColetaSQLHelper.COLUNA_COLETADESCRICAO));
+            long id = cursor.getLong(cursor.getColumnIndex(ColetaSQLHelper.COLUNA_COLETAID));
+            String coletaDescricao = cursor.getString(cursor.getColumnIndex(ColetaSQLHelper.COLUNA_COLETADESCRICAO));
             Coleta coleta = new Coleta(id, coletaDescricao);
             coletas.add(coleta);
         }

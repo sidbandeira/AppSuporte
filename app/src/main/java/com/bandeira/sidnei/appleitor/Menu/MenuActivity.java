@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.bandeira.sidnei.appleitor.CadastraColetaActivity;
+import com.bandeira.sidnei.appleitor.ListagemColetasActivity;
 import com.bandeira.sidnei.appleitor.R;
 
 public class MenuActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void btnContinua(View view) {
-        Intent it = new Intent(this, CadastraColetaActivity.class);
+        Intent it = new Intent(this, ListagemColetasActivity.class);
         startActivityForResult(it,20);
     }
 }

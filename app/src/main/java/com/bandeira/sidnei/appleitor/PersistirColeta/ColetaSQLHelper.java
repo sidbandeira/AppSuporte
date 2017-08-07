@@ -23,7 +23,7 @@ public class ColetaSQLHelper extends SQLiteOpenHelper{
     public static final String COLUNA_COLETAITEMID = "_id";
     public static final String COLUNA_CODBARRA = "codbarra";
     public static final String COLUNA_QUANTIDADE = "quantidade";
-    public static final String COLUNA_IDCOLETA = "idcoleta";
+    public static final String COLUNA_ITEMIDCOLETA = "idcoleta";
 
     public ColetaSQLHelper(Context context) {
         super(context, NOME_BANCO, null, VERSAO_BANCO);
@@ -43,7 +43,7 @@ public class ColetaSQLHelper extends SQLiteOpenHelper{
                         COLUNA_COLETAITEMID +" INTEGER PRIMARY KEY AUTOINCREMENT,"+
                         COLUNA_CODBARRA +" TEXT NOT NULL,"+
                         COLUNA_QUANTIDADE +" REAL,"+
-                        COLUNA_IDCOLETA +" INTEGER)");
+                        COLUNA_ITEMIDCOLETA +" INTEGER)");
     }
 
     @Override
