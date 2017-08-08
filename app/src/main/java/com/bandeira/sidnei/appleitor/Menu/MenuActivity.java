@@ -18,6 +18,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
     }
 
+    //CADASTRA UMA NOVA COLETA
     public void btnNova(View view) {
         Intent it = new Intent(this, CadastraColetaActivity.class);
         startActivityForResult(it,20);
@@ -29,8 +30,9 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
+    //LISTAGEM DE COLETAS GRAVADAS.
     public void btnContinua(View view) {
         Intent it = new Intent(this, ListagemColetasActivity.class);
-        startActivityForResult(it,20);
+        startActivityForResult(it,21);
     }
 }

@@ -1,12 +1,14 @@
 package com.bandeira.sidnei.appleitor;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.bandeira.sidnei.appleitor.Adaptadores.AdapterListagemColeta;
 import com.bandeira.sidnei.appleitor.Classes.Coleta;
@@ -44,7 +46,12 @@ public class ListagemColetasActivity extends AppCompatActivity {
                         // BOTAO 1
                         .setPositiveButton("Coletar",new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,int id) {
-                                //COLOCAR AQUI A AÇÃO DO BOTAO
+
+                                if ((int) coleta.get( posicao)._id <= 0) {
+                                    Toast.makeText(getApplicationContext(), "Erro ao selecionar uma coleta!", Toast.LENGTH_SHORT).show();
+                                }else{
+                                    continuarColeta((int) coleta.get( posicao)._id);
+                                }
                             }
                         })
 
@@ -90,6 +97,12 @@ public class ListagemColetasActivity extends AppCompatActivity {
         ColetaRepositorio rep = new ColetaRepositorio(this);
         rep.excluir(codigo);
 
+    }
+
+    private void continuarColeta(Integer codigo){
+        Intent it = new Intent(this, ColetaActivity.class);
+        it.putExtra("codigoColeta", String.valueOf( codigo));
+        startActivity(it);
     }
 
 }
