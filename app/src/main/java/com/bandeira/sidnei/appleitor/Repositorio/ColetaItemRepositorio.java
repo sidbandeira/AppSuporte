@@ -68,6 +68,17 @@ public class ColetaItemRepositorio {
         return linhasAfetadas;
     }
 
+    // EXCLUI TODOS OS ITENS REFERENTES A UMA COLETA
+    public int excluirTodosItens(Integer CodColeta) {
+        SQLiteDatabase db = helper.getWritableDatabase();
+        int linhasAfetadas = db.delete(
+                ColetaSQLHelper.TABELA_COLETAITEM,
+                ColetaSQLHelper.COLUNA_ITEMIDCOLETA +" = ?",
+                new String[]{ String.valueOf(CodColeta)});
+        db.close();
+        return linhasAfetadas;
+    }
+
     public List<ColetaItem> buscarColeta(String filtro) {
         SQLiteDatabase db = helper.getReadableDatabase();
         String sql = "SELECT * FROM "+ ColetaSQLHelper.TABELA_COLETAITEM;
