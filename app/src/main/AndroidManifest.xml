@@ -43,7 +43,10 @@
             android:name=".ColetaActivity"
             android:label="Incluir Produto"
             android:screenOrientation="portrait" />
-        <activity android:name=".ListagemColetasActivity"></activity>
+        <activity
+            android:name=".ListagemColetasActivity"
+            android:label="Lista de Coletas"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
