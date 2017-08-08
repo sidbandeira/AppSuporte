@@ -34,7 +34,7 @@ public class ColetaRepositorio {
     private int atualizar(Coleta coleta) {
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(ColetaSQLHelper.COLUNA_ITEMIDCOLETA, coleta._id);
+        cv.put(ColetaSQLHelper.COLUNA_COLETAID, coleta._id);
         cv.put(ColetaSQLHelper.COLUNA_COLETADESCRICAO, coleta.coletadescricao);
         int linhasAfetadas = db.update(
                 ColetaSQLHelper.TABELA_COLETA,
@@ -53,12 +53,12 @@ public class ColetaRepositorio {
         }
     }
 
-    public int excluir(Coleta coleta) {
+    public int excluir(Integer codigo) {
         SQLiteDatabase db = helper.getWritableDatabase();
         int linhasAfetadas = db.delete(
                 ColetaSQLHelper.TABELA_COLETA,
-                ColetaSQLHelper.COLUNA_ITEMIDCOLETA +" = ?",
-                new String[]{ String.valueOf(coleta._id)});
+                ColetaSQLHelper.COLUNA_COLETAID +" = ?",
+                new String[]{ String.valueOf(codigo)});
         db.close();
         return linhasAfetadas;
     }
