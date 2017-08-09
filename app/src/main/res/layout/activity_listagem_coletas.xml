@@ -10,20 +10,17 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/lnTitulo"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_width="match_parent"
+        android:id="@+id/lnTitulo">
         <TextView
             android:id="@+id/txtCodigo"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:textSize="20dp"
             android:text="Código"
             android:textColor="#ffa602"
-            android:layout_marginLeft="4dp"
-            android:layout_weight="1.07" />
+            android:layout_marginLeft="4dp" />
 
         <TextView
             android:id="@+id/txtTitulo"
