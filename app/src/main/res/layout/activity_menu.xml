@@ -81,7 +81,8 @@
             android:layout_weight="0.47"
             android:background="@drawable/btnexcluir"
             android:gravity="bottom|center_vertical|center_horizontal"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:onClick="btExclui"/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
