@@ -5,34 +5,34 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/lnTitulo">
-        <TextView
-            android:id="@+id/txtCodigo"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:textSize="20dp"
-            android:text="Código"
-            android:textColor="#ffa602"
-            android:layout_marginLeft="4dp"
-            android:layout_weight="1.07" />
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:id="@+id/lnTitulo">-->
+        <!--<TextView-->
+            <!--android:id="@+id/txtCodigo"-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="Código"-->
+            <!--android:textColor="#ffa602"-->
+            <!--android:layout_marginLeft="4dp"-->
+            <!--android:layout_weight="1.07" />-->
 
-        <TextView
-            android:id="@+id/txtTitulo"
-            android:layout_width="293dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:textSize="20dp"
-            android:text="Descricao da Coleta"
-            android:textColor="#ffa602"
-            android:layout_marginLeft="4dp" />
+        <!--<TextView-->
+            <!--android:id="@+id/txtTitulo"-->
+            <!--android:layout_width="293dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="Descricao da Coleta"-->
+            <!--android:textColor="#ffa602"-->
+            <!--android:layout_marginLeft="4dp" />-->
 
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <LinearLayout
         android:orientation="horizontal"
