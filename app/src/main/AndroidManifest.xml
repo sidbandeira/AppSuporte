@@ -46,7 +46,8 @@
         <activity
             android:name=".ListagemColetasActivity"
             android:label="Lista de Coletas"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".ExcluirColetasActivity"></activity>
     </application>
 
 </manifest>
