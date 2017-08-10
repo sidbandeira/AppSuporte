@@ -39,8 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:textSize="20dp"
+            android:textStyle="bold"
             android:text="Código"
-            android:textColor="#ffa602"
+            android:label="Excluir Coletas"
+            android:screenOrientation="portrait"
             android:layout_marginLeft="4dp" />
 
         <TextView
@@ -49,8 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:textSize="20dp"
+            android:textStyle="bold"
             android:text="Descrição da Coleta"
-            android:textColor="#ffa602"
             android:layout_marginLeft="4dp" />
 
 

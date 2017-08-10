@@ -19,7 +19,6 @@
             android:layout_alignParentTop="true"
             android:textSize="20dp"
             android:text="Cod."
-            android:textColor="#ffa602"
             android:layout_marginLeft="4dp"
             android:layout_weight="1.07" />
 
@@ -30,7 +29,6 @@
             android:layout_alignParentTop="true"
             android:textSize="20dp"
             android:text="Descricao da Coleta"
-            android:textColor="#ffa602"
             android:layout_marginLeft="4dp" />
 
 
