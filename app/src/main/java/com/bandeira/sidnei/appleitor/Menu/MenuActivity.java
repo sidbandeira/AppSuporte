@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.bandeira.sidnei.appleitor.CadastraColetaActivity;
 import com.bandeira.sidnei.appleitor.ExcluirColetasActivity;
+import com.bandeira.sidnei.appleitor.ExportaActivity;
 import com.bandeira.sidnei.appleitor.ListagemColetasActivity;
 import com.bandeira.sidnei.appleitor.R;
 
@@ -22,11 +23,11 @@ public class MenuActivity extends AppCompatActivity {
     //CADASTRA UMA NOVA COLETA
     public void btnNova(View view) {
         Intent it = new Intent(this, CadastraColetaActivity.class);
-        startActivityForResult(it,20);
+        startActivityForResult(it,1);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 20) {
+        if (requestCode == 1) {
             Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
         }
     }
@@ -34,11 +35,17 @@ public class MenuActivity extends AppCompatActivity {
     //LISTAGEM DE COLETAS GRAVADAS.
     public void btnContinua(View view) {
         Intent it = new Intent(this, ListagemColetasActivity.class);
-        startActivityForResult(it,21);
+        startActivityForResult(it,2);
+    }
+
+    public void btExporta(View view) {
+        Intent it = new Intent(this, ExportaActivity.class);
+        startActivityForResult(it,3);
     }
 
     public void btExclui(View view) {
         Intent it = new Intent(this, ExcluirColetasActivity.class);
-        startActivityForResult(it,22);
+        startActivityForResult(it,4);
     }
+
 }
