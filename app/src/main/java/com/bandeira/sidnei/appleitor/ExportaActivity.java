@@ -1,10 +1,11 @@
 package com.bandeira.sidnei.appleitor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ListView;
 
-import com.bandeira.sidnei.appleitor.Adaptadores.AdapterListagemColeta;
+import com.bandeira.sidnei.appleitor.Adaptadores.AdapterListagemExportaColeta;
 import com.bandeira.sidnei.appleitor.Classes.Coleta;
 import com.bandeira.sidnei.appleitor.Repositorio.ColetaRepositorio;
 
@@ -26,9 +27,17 @@ public class ExportaActivity extends AppCompatActivity {
 
     }
 
+    public void btExportar(View view) {
+
+    }
+
+    public void btCancelar(View view) {
+        finish();
+    }
+
     private void listarColetas(){
         ColetaRepositorio rep = new ColetaRepositorio(this);
         coleta = rep.buscarColeta(null);
-        listaColeta.setAdapter(new AdapterListagemColeta(this, (ArrayList<Coleta>) coleta ));
+        listaColeta.setAdapter(new AdapterListagemExportaColeta(this, (ArrayList<Coleta>) coleta ));
     }
 }

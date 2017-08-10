@@ -92,6 +92,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btExportar"
             android:layout_weight="1"
+            android:onClick="btExportar"
             />
 
         <Button
@@ -100,6 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/btExportar"
             android:id="@+id/btCancela"
+            android:onClick="btCancelar"
             android:layout_weight="1"/>
     </LinearLayout>
 </LinearLayout>
