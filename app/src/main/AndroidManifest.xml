@@ -50,7 +50,11 @@
         <activity
             android:name=".ExcluirColetasActivity"
             android:label="Excluir Coletas"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ExportaActivity"
+            android:label="Exportar Coletas"
+            android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>

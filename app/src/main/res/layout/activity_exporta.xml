@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bandeira.sidnei.appleitor.ExportaActivity">
+
+    <!--LINEAR COM O SPINNER DO DELIMITADOR-->
+    <LinearLayout
+        android:id="@+id/lnDelimitador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0">
+
+        <Spinner
+            android:id="@+id/spDelimitador"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:entries="@array/spdelimitador"
+            android:background="@drawable/contorno"/>
+
+    </LinearLayout>
+
+    <!--LINEAR COM A DESCRIÇÃO DOS CAMPOS DA LISTA DE COLETAS-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/lnTitulo"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/txtCodigo"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="Código"
+            android:textColor="#ffa602"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="Descrição da Coleta"
+            android:textColor="#ffa602"
+            android:layout_marginLeft="4dp" />
+
+
+    </LinearLayout>
+
+
+    <!--LINEAR COM A LISTA DE COLETAS-->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/lnLista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/listagemColetas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+    <!--LINEAR COM OS BOTOES-->
+    <LinearLayout
+        android:id="@+id/lnBotoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <Button
+            android:text="Exportar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btExportar"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:text="Cancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btExportar"
+            android:id="@+id/btCancela"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
