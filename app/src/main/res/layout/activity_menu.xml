@@ -68,7 +68,8 @@
             android:layout_weight="0.47"
             android:background="@drawable/btnexportar"
             android:gravity="bottom|center_vertical|center_horizontal"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:onClick="btExporta"/>
         <Space
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
