@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/lnItens"
+        android:layout_marginTop="4dp">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtCodColeta"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:textSize="20dp"
+            android:text="Cod."
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1.07" />
+
+        <TextView
+            android:id="@+id/txtDescricao"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="Descricao da Coleta"
+            android:layout_marginLeft="4dp" />
+
+
+    </LinearLayout>
+</LinearLayout>
