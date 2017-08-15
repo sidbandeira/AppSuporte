@@ -77,7 +77,7 @@ public class CadastraColetaActivity extends AppCompatActivity {
     private void gravarColeta(){
         ColetaRepositorio rep = new ColetaRepositorio(this);
         Coleta novaColeta = new Coleta();
-        novaColeta.coletadescricao = nomeColeta;
+        novaColeta.setcoletadescricao(nomeColeta);
         rep.salvar(novaColeta);
         if (novaColeta.get_id() <= 0) {
             Toast.makeText(getApplicationContext(), "Erro ao gravar a coleta!", Toast.LENGTH_SHORT).show();

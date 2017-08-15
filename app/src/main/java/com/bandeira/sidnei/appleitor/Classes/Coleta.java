@@ -3,6 +3,8 @@ package com.bandeira.sidnei.appleitor.Classes;
 public class Coleta {
     public long _id ;
     public String coletadescricao;
+    public Boolean marcado = false;
+
 
     public String getcoletadescricao() {
         return coletadescricao;
@@ -18,6 +20,14 @@ public class Coleta {
 
     public void set_id(int _id) {
         this._id = _id;
+    }
+
+    public Boolean isMarcado(){
+        return marcado;
+    }
+
+    public void setMarcado(boolean ismarMarcado){
+        this.marcado = ismarMarcado;
     }
 
     public Coleta(){

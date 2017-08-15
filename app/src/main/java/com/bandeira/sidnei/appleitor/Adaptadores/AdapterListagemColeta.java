@@ -48,7 +48,7 @@ public class AdapterListagemColeta extends BaseAdapter {
         //atravez do layout pego pelo LayoutInflater, pegamos cada id relacionado
         //ao item e definimos as informações.
         ((TextView) convertView.findViewById(R.id.txtCodColeta)).setText(String.valueOf(col.get_id()));
-        ((TextView) convertView.findViewById(R.id.txtDescricao)).setText(col.coletadescricao);
+        ((TextView) convertView.findViewById(R.id.txtDescricao)).setText(col.getcoletadescricao());
 
         return convertView;
     }

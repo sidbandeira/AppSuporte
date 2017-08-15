@@ -12,6 +12,7 @@
         android:layout_marginTop="4dp">
 
         <CheckBox
+            android:id="@+id/chkMarcado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
