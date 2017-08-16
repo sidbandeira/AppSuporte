@@ -3,6 +3,7 @@ package com.bandeira.sidnei.appleitor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.ListView;
 
 import com.bandeira.sidnei.appleitor.Adaptadores.AdapterListagemExportaColeta;
@@ -28,7 +29,14 @@ public class ExportaActivity extends AppCompatActivity {
     }
 
     public void btExportar(View view) {
+        Adapter ad = listaColeta.getAdapter();
 
+        for (int i = 0; i < ad.getCount(); i++) {
+            Coleta col  = (Coleta) ad.getItem(i);
+            if(col.isMarcado()){
+                // EXECUTAR A AÇÃO DE EXPORTAR AQUI
+            }
+        }
     }
 
     public void btCancelar(View view) {

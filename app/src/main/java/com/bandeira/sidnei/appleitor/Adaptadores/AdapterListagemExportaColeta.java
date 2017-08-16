@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bandeira.sidnei.appleitor.Classes.Coleta;
 import com.bandeira.sidnei.appleitor.R;
@@ -54,14 +53,6 @@ public class AdapterListagemExportaColeta extends BaseAdapter {
         //infla o layout para podermos preencher os dados
         view = mInflater.inflate(R.layout.item_listagem_exporta_coleta, null);
 
-        //atravez do layout pego pelo LayoutInflater, pegamos cada id relacionado
-        //ao item e definimos as informações.
-//        ((TextView) convertView.findViewById(R.id.txtCodColeta)).setText(String.valueOf(col.get_id()));
-//        ((TextView) convertView.findViewById(R.id.txtDescricao)).setText(col.getcoletadescricao());
-//        // marcação do checkbox
-//        ((CheckBox) convertView.findViewById(R.id.chkMarcado)).setChecked(col.isMarcado());
-
-
         TextView txtCodColeta = (TextView) view.findViewById(R.id.txtCodColeta);
         TextView txtDescricao = (TextView) view.findViewById(R.id.txtDescricao);
         CheckBox checMarcado = (CheckBox) view.findViewById(R.id.chkMarcado);
@@ -84,7 +75,7 @@ public class AdapterListagemExportaColeta extends BaseAdapter {
 
                 if (check.isChecked()) {
 
-                    Toast.makeText(context, String.valueOf(coleta.get_id()), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, String.valueOf(coleta.get_id()), Toast.LENGTH_SHORT).show();
                     //Faz uma checagem se existe o mesmo valor na lista de inteiros
                     if(!idSelecionados.contains(String.valueOf(coleta.get_id()))){
                         //Adiciona em uma lista para poder manipular os dados depois
@@ -92,7 +83,7 @@ public class AdapterListagemExportaColeta extends BaseAdapter {
                     }
 
                 } else {
-                    Toast.makeText(context,String.valueOf(coleta.get_id()),Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context,String.valueOf(coleta.get_id()),Toast.LENGTH_SHORT).show();
 
                     //Faz uma checagem se existe o mesmo valor na lista de inteiros
                     if(idSelecionados.contains(coleta.get_id())){
