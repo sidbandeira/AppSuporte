@@ -54,6 +54,7 @@ public class ExportaActivity extends AppCompatActivity {
                     // EXECUTAR A AÇÃO DE EXPORTAR AQUI
                 }
             }
+            Toast.makeText(this,"Exportação realizada com sucesso!",Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -69,6 +70,7 @@ public class ExportaActivity extends AppCompatActivity {
 
     private void montaArquivo(Integer codigoColeta, String nomeColeta){
         try {
+            Integer contador = 0;
             List<ColetaItem> colItem = new ArrayList<ColetaItem>();
             ColetaItemRepositorio rep = new ColetaItemRepositorio(this);
 
@@ -77,10 +79,13 @@ public class ExportaActivity extends AppCompatActivity {
             StringBuffer texto = new StringBuffer();
             for (int i = 0; i < colItem.size();i++){
                 texto.append( colItem.get(i).getCodbarras() + delimitador + colItem.get(i).getQuantidade() + "\n");
+                contador ++;
             }
 
-            salvarExterno(texto.toString() ,codigoColeta+"_"+nomeColeta + ".txt");
-            //EnviarEmail(emailFornecedor , nomeFornecedor + ".txt");
+            if (contador > 0){
+                salvarExterno(texto.toString() ,codigoColeta+"_"+nomeColeta + ".txt");
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
