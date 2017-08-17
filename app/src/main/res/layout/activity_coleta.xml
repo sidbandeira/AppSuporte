@@ -20,18 +20,19 @@
         android:weightSum="1">
 
         <EditText
+            android:id="@+id/edtBarras"
+            style="@android:style/Widget.Holo.Light.EditText"
             android:layout_width="285dp"
             android:layout_height="40dp"
-            android:inputType="text"
-            android:ems="10"
-            android:layout_marginTop="19dp"
-            android:id="@+id/edtBarras"
-            android:hint="  Código de Barras"
-            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            style="@android:style/Widget.Holo.Light.EditText"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
             android:height="30dp"
-            android:background="@drawable/contorno" />
+            android:background="@drawable/contorno"
+            android:ems="10"
+            android:hint="  Código de Barras"
+            android:maxLength="13"
+            android:inputType="number" />
 
         <Button
             android:layout_marginTop="19dp"
@@ -63,7 +64,8 @@
             android:background="@drawable/contorno"
             android:ems="10"
             android:hint="  Digite a quantidade"
-            android:inputType="text" />
+            android:inputType="numberDecimal"
+            android:maxLength="8" />
 
     </LinearLayout>
 
