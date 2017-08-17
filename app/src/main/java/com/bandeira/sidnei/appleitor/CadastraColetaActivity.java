@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.bandeira.sidnei.appleitor.Classes.Coleta;
@@ -19,13 +18,13 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class CadastraColetaActivity extends AppCompatActivity {
-    public static String delimitador = "";
+    //public static String delimitador = "";
     public static String nomeColeta = "";
     private Long codColeta ;
     private EditText edtDescricao;
     private Button btConfirma;
     private Button btCancela;
-    private Spinner spDelimitador;
+    //private Spinner spDelimitador;
     private ArrayList<String> Arquivos = new ArrayList<String>();
 
     @Override
@@ -36,12 +35,12 @@ public class CadastraColetaActivity extends AppCompatActivity {
         edtDescricao = (EditText)findViewById(R.id.edtDescricao);
         btConfirma = (Button)findViewById(R.id.btConfirma);
         btCancela = (Button)findViewById(R.id.btCancela);
-        spDelimitador = (Spinner) findViewById(R.id.spDelimitador);
+        //spDelimitador = (Spinner) findViewById(R.id.spDelimitador);
 
     }
 
     public void btCofirma(View view) throws FileNotFoundException {
-        delimitador = (String)spDelimitador.getSelectedItem();
+        //delimitador = (String)spDelimitador.getSelectedItem();
         nomeColeta = edtDescricao.getText().toString();
 
         if (nomeColeta.isEmpty()){

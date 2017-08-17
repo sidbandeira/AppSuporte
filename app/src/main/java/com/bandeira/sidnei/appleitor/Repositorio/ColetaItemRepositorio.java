@@ -84,7 +84,7 @@ public class ColetaItemRepositorio {
         String sql = "SELECT * FROM "+ ColetaSQLHelper.TABELA_COLETAITEM;
         String[] argumentos = null;
         if (filtro != null) {
-            sql += " WHERE "+ ColetaSQLHelper.COLUNA_CODBARRA +" LIKE ?";
+            sql += " WHERE "+ ColetaSQLHelper.COLUNA_ITEMIDCOLETA + " = ?";
             argumentos = new String[]{ filtro };
         }
         sql += " ORDER BY "+ ColetaSQLHelper.COLUNA_COLETAITEMID;
