@@ -32,16 +32,7 @@
             android:height="30dp"
             android:background="@drawable/contorno" />
 
-        <Spinner
-            android:id="@+id/spDelimitador"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:entries="@array/spdelimitador"
-            android:background="@drawable/contorno"/>
-
     </LinearLayout>
-
 
 
     <LinearLayout
