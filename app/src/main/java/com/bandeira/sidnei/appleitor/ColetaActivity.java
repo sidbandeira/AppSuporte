@@ -57,20 +57,25 @@ public class ColetaActivity extends AppCompatActivity {
     }
 
     public void btConfirma(View view) {
-        codigoBarras = edtBarras.getText().toString();
-        qtde = Double.parseDouble(edtQtde.getText().toString());
+        if ( edtBarras.getText().toString().isEmpty() || edtQtde.getText().toString().isEmpty()){
+            Toast.makeText(this,"Informe um produto válido!",Toast.LENGTH_SHORT).show();
+            edtBarras.requestFocus();
+        }else {
+            codigoBarras = edtBarras.getText().toString();
+            qtde = Double.parseDouble(edtQtde.getText().toString());
 
-        if(codigoBarras.isEmpty()){
-            Toast.makeText(this,"Informe um código de barras!",Toast.LENGTH_SHORT).show();
-            edtBarras.hasFocus();
+            if (codigoBarras.isEmpty()) {
+                Toast.makeText(this, "Informe um código de barras!", Toast.LENGTH_SHORT).show();
+                edtBarras.hasFocus();
+            }
+
+            if (qtde.equals(0)) {
+                Toast.makeText(this, "Informe a quantidade coletada!", Toast.LENGTH_SHORT).show();
+                edtQtde.hasFocus();
+            }
+
+            gravarColetaItem();
         }
-
-        if(qtde.equals(0)){
-            Toast.makeText(this,"Informe a quantidade coletada!",Toast.LENGTH_SHORT).show();
-            edtQtde.hasFocus();
-        }
-
-        gravarColetaItem();
 
     }
 
@@ -95,6 +100,8 @@ public class ColetaActivity extends AppCompatActivity {
         edtBarras.setText("");
         edtQtde.setText("");
         edtBarras.requestFocus();
+        codigoBarras = "";
+        qtde = 0.00;
     }
 
 }
