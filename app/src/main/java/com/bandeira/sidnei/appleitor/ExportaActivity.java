@@ -1,5 +1,7 @@
 package com.bandeira.sidnei.appleitor;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +43,8 @@ public class ExportaActivity extends AppCompatActivity {
 
     public void btExportar(View view) {
         delimitador = (String) spDelimitador.getSelectedItem();
+        Integer contador = 0;
+        String anexo = "";
 
         if (delimitador.contains("Selecione")) {
             Toast.makeText(this, "Escolha um delimitador", Toast.LENGTH_SHORT).show();
@@ -51,10 +55,17 @@ public class ExportaActivity extends AppCompatActivity {
                 Coleta col = (Coleta) ad.getItem(i);
                 if (col.isMarcado()) {
                     montaArquivo((int)col.get_id(),col.getcoletadescricao());
-                    // EXECUTAR A AÇÃO DE EXPORTAR AQUI
+                    contador++;
+                    anexo = anexo + col.get_id()+"_"+col.getcoletadescricao() + ".txt;";
                 }
             }
-            Toast.makeText(this,"Exportação realizada com sucesso!",Toast.LENGTH_SHORT).show();
+
+            if (contador > 0){
+
+                EnviarEmail(contador, anexo);
+                Toast.makeText(this,"Exportação realizada com sucesso!",Toast.LENGTH_SHORT).show();
+            }
+
         }
     }
 
@@ -114,5 +125,33 @@ public class ExportaActivity extends AppCompatActivity {
         }finally {
             pw.close();
         }
+    }
+
+    // FUNCAO RESPONSAVEL PELO ENVIO DE EMAIL
+    public void EnviarEmail(Integer NumeroAnexos, String Anexo) {
+        Intent intent = new Intent(Intent.ACTION_SEND_MULTIPLE);
+        intent.setType("text/plain");
+        intent.putExtra(intent.EXTRA_EMAIL, new String[]{""});
+        //intent.putExtra(Intent.EXTRA_SUBJECT, "Pedido de Compras");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Arquivos Coletados");
+        //intent.putExtra(Intent.EXTRA_TEXT, "Em anexo pedido de compras.");
+        intent.putExtra(Intent.EXTRA_TEXT, "Segue em anexo arquivo(s) coletado(s).");
+
+        //SPLIT PARA CARREGAR OS ANEXOS
+        String CurrentString = Anexo;
+        String[] anexos = CurrentString.split(";");
+
+        File baseDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+        baseDir.mkdirs();
+        //File f1 = new File(baseDir, Anexo);
+        ArrayList<Uri> uris = new ArrayList<Uri>();
+
+        for (Integer i = 0; i < NumeroAnexos ;i++){
+            File f1 = new File(baseDir, anexos[i]);
+            uris.add(Uri.fromFile(f1));
+        }
+
+        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+        startActivity(intent);
     }
 }
