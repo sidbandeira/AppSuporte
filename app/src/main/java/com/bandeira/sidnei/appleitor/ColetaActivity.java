@@ -48,11 +48,11 @@ public class ColetaActivity extends AppCompatActivity {
             //formatTxt.setText("FORMAT: " + scanFormat);
             //contentTxt.setText("CONTENT: " + scanContent);
             edtBarras.setText(scanContent);
+            edtQtde.requestFocus();
         }
         else{
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "No scan data received!", Toast.LENGTH_SHORT);
-            toast.show();
+            Toast.makeText(getApplicationContext(),"No scan data received!", Toast.LENGTH_SHORT).show();
+            edtBarras.requestFocus();
         }
     }
 
@@ -86,15 +86,15 @@ public class ColetaActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Erro ao gravar item coletado!", Toast.LENGTH_SHORT).show();
             edtBarras.hasFocus();
         }else{
-            Toast.makeText(getApplicationContext(),String.valueOf(novoItem.get_id()) , Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Produto gravado com sucesso!" , Toast.LENGTH_SHORT).show();
             novo();
-            edtBarras.hasFocus();
         }
     }
 
     private void novo(){
         edtBarras.setText("");
         edtQtde.setText("");
+        edtBarras.requestFocus();
     }
 
 }
