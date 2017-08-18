@@ -40,7 +40,15 @@ public class CadastraColetaActivity extends AppCompatActivity {
             gravarColeta();
             Intent it = new Intent(this, ColetaActivity.class);
             it.putExtra("codigoColeta", String.valueOf( codColeta));
-            startActivity(it);
+            //startActivity(it);
+            startActivityForResult(it,1);
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            edtDescricao.setText("");
+            edtDescricao.requestFocus();
         }
     }
 
