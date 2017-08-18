@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.bandeira.sidnei.appleitor.CadastraColetaActivity;
 import com.bandeira.sidnei.appleitor.ExcluirColetasActivity;
@@ -28,7 +27,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1) {
-            Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
         }
     }
 
