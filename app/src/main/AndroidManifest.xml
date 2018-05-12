@@ -59,7 +59,7 @@
             android:name=".MenuPrincipalActivity"
             android:label="Menu Principal"
             android:screenOrientation="portrait" />
-
+        <activity android:name=".ProdutosActivity"></activity>
     </application>
 
 </manifest>

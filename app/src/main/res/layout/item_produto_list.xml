@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--LINEAR DA DESCRICAO DO PRODUTO-->
+    <LinearLayout
+        android:id="@+id/linearDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="cod"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=" - "
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/txtDescricaoProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:text="DESCRICAO DO PRODUTO"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    </LinearLayout>
+
+    <!--IMAGEM DO PRODUTO-->
+    <ImageView
+        android:id="@+id/imgFoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/linearDescricao"
+        android:layout_alignParentStart="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <!--LINHA ALIQUOTA-->
+    <TextView
+        android:id="@+id/txtAliquota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="Aliquota: "
+        android:layout_below="@+id/linearDescricao"
+        android:layout_toEndOf="@+id/imgFoto" />
+
+    <TextView
+        android:id="@+id/txtAliq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Substituição"
+        android:layout_toEndOf="@+id/txtAliquota"
+        android:layout_alignBaseline="@+id/txtAliquota"/>
+
+    <!--LINHA UNIDADE-->
+    <TextView
+        android:id="@+id/txtUnidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="Uniade: "
+        android:layout_below="@+id/txtAliquota"
+        android:layout_toEndOf="@+id/imgFoto" />
+
+    <TextView
+        android:id="@+id/txtUnid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mt"
+        android:layout_toEndOf="@+id/txtUnidade"
+        android:layout_alignBaseline="@+id/txtUnidade"/>
+
+    <!--LINHA PRECO CUSTO-->
+    <TextView
+        android:id="@+id/txtCusto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="Preco custo ..R$: "
+        android:layout_below="@+id/txtUnidade"
+        android:layout_toEndOf="@+id/imgFoto" />
+
+    <TextView
+        android:id="@+id/txtCustoProd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:layout_toEndOf="@+id/txtCusto"
+        android:layout_alignBaseline="@+id/txtCusto"/>
+
+    <!--LINHA PRECO VENDA-->
+    <TextView
+        android:id="@+id/txtVenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCusto"
+        android:layout_toEndOf="@+id/imgFoto"
+        android:layout_marginLeft="4dp"
+        android:text="Preço Venda .R$: "/>
+
+    <TextView
+        android:id="@+id/txtVendaProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:layout_toEndOf="@+id/txtCusto"
+        android:layout_alignBaseline="@+id/txtVenda"/>
+
+    <!--LINHA PRECO LISTA-->
+    <TextView
+        android:id="@+id/txtVendaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVenda"
+        android:layout_toEndOf="@+id/imgFoto"
+        android:layout_marginLeft="4dp"
+        android:text="Preço Lista ....R$: "/>
+
+    <TextView
+        android:id="@+id/txtVendaListaProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:layout_toEndOf="@+id/txtVenda"
+        android:layout_alignBaseline="@+id/txtVendaLista"/>
+
+    <!--LINHA ULTIMA COMPRA-->
+    <TextView
+        android:id="@+id/txtDataCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVendaLista"
+        android:layout_toEndOf="@+id/imgFoto"
+        android:layout_marginLeft="4dp"
+        android:text="Última Compra: "/>
+
+    <TextView
+        android:id="@+id/txtUltimaCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01/01/1900"
+        android:layout_toEndOf="@+id/txtDataCompra"
+        android:layout_alignBaseline="@+id/txtDataCompra"/>
+
+    <!--LINHA ESTOQUE-->
+
+    <TextView
+        android:id="@+id/txtCodBarras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDataCompra"
+        android:layout_toEndOf="@+id/imgFoto"
+        android:layout_marginLeft="4dp"
+        android:text="7891234567890"/>
+
+    <TextView
+        android:id="@+id/txtEstoque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toEndOf="@+id/txtCodBarras"
+        android:layout_alignBaseline="@+id/txtCodBarras"
+        android:text="  Saldo: "/>
+
+    <TextView
+        android:id="@+id/txtSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:layout_toEndOf="@+id/txtEstoque"
+        android:layout_alignBaseline="@+id/txtEstoque"/>
+
+
+</RelativeLayout>

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.bandeira.sidnei.appleitor.Classes.Produto;
 import com.bandeira.sidnei.appleitor.Menu.MenuActivity;
 
 public class MenuPrincipalActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     }
 
     public void btnProdutos(View view) {
+        Intent it = new Intent(this, ProdutosActivity.class);
+        startActivity(it);
 
     }
 }

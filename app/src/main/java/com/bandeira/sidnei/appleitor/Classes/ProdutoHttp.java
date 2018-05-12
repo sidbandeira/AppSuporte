@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoHttp {
-    public static final String PRODUTO_URL_JSON = "http://sgestao.hol.es/Json/ProdutoWS.json";
+    public static final String PRODUTO_URL_JSON = "https://github.com/sidbandeira/AppSuporte/tree/master/app/src/main/res/drawable/arquivoglobo.json";
     //public static final String PRODUTO_URL_JSON = "http://sgestao.hol.es/ws/ProdutoWs.php?codempresa=";
 
     private static HttpURLConnection connectar(String urlArquivo) throws IOException {
@@ -42,7 +42,7 @@ public class ProdutoHttp {
 
     //FUNCAO VAI RECEBER UMA VARIAVEL INTEIRA COM O CODIGO DA EMPRESA PARA RECARREGAR AS UNIDADES
     // DE NEGOCIO SEMPRE QUE O USUARIO EFETUAR O LOGIN
-    public static List<Produto> carregarProdutoJson(Integer empresa) {
+    public static List<Produto> carregarProdutoJson() {
         try {
 
             //HttpURLConnection conexao = connectar(PRODUTO_URL_JSON + empresa);
