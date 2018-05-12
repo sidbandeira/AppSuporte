@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:background="@drawable/fundo_cinza">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="124dp"
+            android:text="Coletor dados"
+            android:layout_weight="0.47"
+            android:id="@+id/button"
+            android:textAlignment="center"
+            android:onClick="btnColetor"
+            android:baselineAlignBottom="true"
+            android:gravity="bottom|center_vertical|center_horizontal"
+            android:background="@drawable/btnnovo"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="124dp"
+            android:text="Relação Produtos"
+            android:layout_weight="0.47"
+            android:background="@drawable/btncoleta"
+            android:gravity="bottom|center_vertical|center_horizontal"
+            android:textSize="18sp"
+            android:onClick="btnProdutos"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</GridLayout>

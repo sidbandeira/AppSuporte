@@ -54,7 +54,12 @@
         <activity
             android:name=".ExportaActivity"
             android:label="Exportar Coletas"
-            android:screenOrientation="portrait" ></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuPrincipalActivity"
+            android:label="Menu Principal"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
