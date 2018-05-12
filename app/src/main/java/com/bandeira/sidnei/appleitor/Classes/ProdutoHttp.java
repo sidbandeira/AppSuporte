@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoHttp {
-    public static final String PRODUTO_URL_JSON = "https://github.com/sidbandeira/AppSuporte/tree/master/app/src/main/res/drawable/arquivoglobo.json";
+    public static final String PRODUTO_URL_JSON = "https://drive.google.com/open?id=1ANzr-zYTB2AH5WxnFX_pS2beSQSuB8HW";
     //public static final String PRODUTO_URL_JSON = "http://sgestao.hol.es/ws/ProdutoWs.php?codempresa=";
 
     private static HttpURLConnection connectar(String urlArquivo) throws IOException {
