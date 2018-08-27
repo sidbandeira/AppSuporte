@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Adapter;
@@ -148,7 +149,8 @@ public class ExportaActivity extends AppCompatActivity {
 
         for (Integer i = 0; i < NumeroAnexos ;i++){
             File f1 = new File(baseDir, anexos[i]);
-            uris.add(Uri.fromFile(f1));
+            Uri uri = FileProvider.getUriForFile(getApplicationContext(),"com.bandeira.sidnei.appleitor.provider",f1);
+            uris.add(uri);
         }
 
         intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
