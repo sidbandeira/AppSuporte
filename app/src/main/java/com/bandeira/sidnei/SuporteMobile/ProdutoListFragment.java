@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor;
+package com.bandeira.sidnei.SuporteMobile;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -15,9 +15,9 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.bandeira.sidnei.appleitor.Adaptadores.ProdutoListagemAdapter;
-import com.bandeira.sidnei.appleitor.Classes.Produto;
-import com.bandeira.sidnei.appleitor.Classes.ProdutoHttp;
+import com.bandeira.sidnei.SuporteMobile.Adaptadores.ProdutoListagemAdapter;
+import com.bandeira.sidnei.SuporteMobile.Classes.Produto;
+import com.bandeira.sidnei.SuporteMobile.Classes.ProdutoHttp;
 
 import java.util.ArrayList;
 import java.util.List;

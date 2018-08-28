@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor;
+package com.bandeira.sidnei.SuporteMobile;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

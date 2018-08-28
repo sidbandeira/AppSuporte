@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.bandeira.sidnei.appleitor">
+    package="com.bandeira.sidnei.SuporteMobile">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +16,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/iconecoletor"
+        android:icon="@drawable/logonovo"
         android:label="Suporte Mobile"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -74,7 +74,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.bandeira.sidnei.appleitor.provider"
+            android:authorities="com.bandeira.sidnei.SuporteMobile.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

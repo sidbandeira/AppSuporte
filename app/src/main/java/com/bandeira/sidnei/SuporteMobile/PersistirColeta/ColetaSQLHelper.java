@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor.PersistirColeta;
+package com.bandeira.sidnei.SuporteMobile.PersistirColeta;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

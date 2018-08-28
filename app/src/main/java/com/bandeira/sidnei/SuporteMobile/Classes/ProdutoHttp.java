@@ -1,10 +1,10 @@
-package com.bandeira.sidnei.appleitor.Classes;
+package com.bandeira.sidnei.SuporteMobile.Classes;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.bandeira.sidnei.appleitor.PesquisarProdutosActivity;
+import com.bandeira.sidnei.SuporteMobile.PesquisarProdutosActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;

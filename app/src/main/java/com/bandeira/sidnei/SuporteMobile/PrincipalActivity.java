@@ -1,11 +1,9 @@
-package com.bandeira.sidnei.appleitor;
+package com.bandeira.sidnei.SuporteMobile;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import com.bandeira.sidnei.appleitor.Menu.MenuActivity;
 
 public class PrincipalActivity extends AppCompatActivity {
 

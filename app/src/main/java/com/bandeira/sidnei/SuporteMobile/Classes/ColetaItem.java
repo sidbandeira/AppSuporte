@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor.Classes;
+package com.bandeira.sidnei.SuporteMobile.Classes;
 
 public class ColetaItem {
     public long _id;

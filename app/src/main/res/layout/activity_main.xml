@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.bandeira.sidnei.appleitor.MainActivity">
+    tools:context="com.bandeira.sidnei.SuporteMobile.MainActivity">
 
     <Button android:id="@+id/scan_button"
         android:layout_width="wrap_content"

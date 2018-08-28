@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor.Adaptadores;
+package com.bandeira.sidnei.SuporteMobile.Adaptadores;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,8 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.bandeira.sidnei.appleitor.Classes.Coleta;
-import com.bandeira.sidnei.appleitor.R;
+import com.bandeira.sidnei.SuporteMobile.Classes.Coleta;
+import com.bandeira.sidnei.SuporteMobile.R;
 
 import java.util.ArrayList;
 import java.util.List;

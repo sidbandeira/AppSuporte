@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor;
+package com.bandeira.sidnei.SuporteMobile;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,11 +12,11 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.bandeira.sidnei.appleitor.Adaptadores.AdapterListagemExportaColeta;
-import com.bandeira.sidnei.appleitor.Classes.Coleta;
-import com.bandeira.sidnei.appleitor.Classes.ColetaItem;
-import com.bandeira.sidnei.appleitor.Repositorio.ColetaItemRepositorio;
-import com.bandeira.sidnei.appleitor.Repositorio.ColetaRepositorio;
+import com.bandeira.sidnei.SuporteMobile.Adaptadores.AdapterListagemExportaColeta;
+import com.bandeira.sidnei.SuporteMobile.Classes.Coleta;
+import com.bandeira.sidnei.SuporteMobile.Classes.ColetaItem;
+import com.bandeira.sidnei.SuporteMobile.Repositorio.ColetaItemRepositorio;
+import com.bandeira.sidnei.SuporteMobile.Repositorio.ColetaRepositorio;
 
 import java.io.File;
 import java.io.IOException;

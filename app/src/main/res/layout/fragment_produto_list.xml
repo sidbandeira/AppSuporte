@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context="com.bandeira.sidnei.appleitor.ProdutoListFragment">
+    tools:context="com.bandeira.sidnei.SuporteMobile.ProdutoListFragment">
 
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"

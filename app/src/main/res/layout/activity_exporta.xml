@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.bandeira.sidnei.appleitor.ExportaActivity">
+    tools:context="com.bandeira.sidnei.SuporteMobile.ExportaActivity">
 
     <!--LINEAR COM O SPINNER DO DELIMITADOR-->
     <LinearLayout

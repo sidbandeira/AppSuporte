@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor.Adaptadores;
+package com.bandeira.sidnei.SuporteMobile.Adaptadores;
 
 
 import android.content.Context;
@@ -9,8 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bandeira.sidnei.appleitor.Classes.Produto;
-import com.bandeira.sidnei.appleitor.R;
+import com.bandeira.sidnei.SuporteMobile.Classes.Produto;
+import com.bandeira.sidnei.SuporteMobile.R;
 
 import java.util.List;
 

@@ -1,15 +1,15 @@
-package com.bandeira.sidnei.appleitor.Menu;
+package com.bandeira.sidnei.SuporteMobile.Menu;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.bandeira.sidnei.appleitor.CadastraColetaActivity;
-import com.bandeira.sidnei.appleitor.ExcluirColetasActivity;
-import com.bandeira.sidnei.appleitor.ExportaActivity;
-import com.bandeira.sidnei.appleitor.ListagemColetasActivity;
-import com.bandeira.sidnei.appleitor.R;
+import com.bandeira.sidnei.SuporteMobile.CadastraColetaActivity;
+import com.bandeira.sidnei.SuporteMobile.ExcluirColetasActivity;
+import com.bandeira.sidnei.SuporteMobile.ExportaActivity;
+import com.bandeira.sidnei.SuporteMobile.ListagemColetasActivity;
+import com.bandeira.sidnei.SuporteMobile.R;
 
 public class MenuActivity extends AppCompatActivity {
 

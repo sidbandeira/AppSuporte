@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor.Repositorio;
+package com.bandeira.sidnei.SuporteMobile.Repositorio;
 
 
 import android.content.ContentValues;
@@ -6,8 +6,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.bandeira.sidnei.appleitor.Classes.ColetaItem;
-import com.bandeira.sidnei.appleitor.PersistirColeta.ColetaSQLHelper;
+import com.bandeira.sidnei.SuporteMobile.Classes.ColetaItem;
+import com.bandeira.sidnei.SuporteMobile.PersistirColeta.ColetaSQLHelper;
 
 import java.util.ArrayList;
 import java.util.List;

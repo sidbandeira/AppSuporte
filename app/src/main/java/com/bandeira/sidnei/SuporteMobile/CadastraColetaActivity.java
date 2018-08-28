@@ -1,4 +1,4 @@
-package com.bandeira.sidnei.appleitor;
+package com.bandeira.sidnei.SuporteMobile;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.bandeira.sidnei.appleitor.Classes.Coleta;
-import com.bandeira.sidnei.appleitor.Repositorio.ColetaRepositorio;
+import com.bandeira.sidnei.SuporteMobile.Classes.Coleta;
+import com.bandeira.sidnei.SuporteMobile.Repositorio.ColetaRepositorio;
 
 import java.io.FileNotFoundException;
 
