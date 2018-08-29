@@ -10,17 +10,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 public class ProdutoHttp {
     //public static final String PRODUTO_URL_JSON = "http://10.0.2.2/arquivos/arquivoglobonovo.json"; CONEXAO LOCAL HOST
     //public static final String PRODUTO_URL_JSON = "http://suporte-cloud.azurewebsites.net/api/produtoglobo"; CONEXAO EXTERNA
-    public static final String PRODUTO_URL_JSON = "http://192.168.200.23:8080/api/produto"; //CONEXAO INTERNA
+    private static String PRODUTO_URL_JSON = ""; //CONEXAO INTERNA
 
     private static HttpURLConnection connectar(String urlArquivo) throws IOException {
         final int SEGUNDOS = 1000;
@@ -42,12 +44,10 @@ public class ProdutoHttp {
         return (info != null && info.isConnected());
     }
 
-    //FUNCAO VAI RECEBER UMA VARIAVEL INTEIRA COM O CODIGO DA EMPRESA PARA RECARREGAR AS UNIDADES
-    // DE NEGOCIO SEMPRE QUE O USUARIO EFETUAR O LOGIN
+
     public static List<Produto> carregarProdutoJson() {
         try {
-
-            //HttpURLConnection conexao = connectar(PRODUTO_URL_JSON + empresa);
+            PRODUTO_URL_JSON = carregaUrl();
             HttpURLConnection conexao = connectar(PRODUTO_URL_JSON + "/" + PesquisarProdutosActivity.codproduto);
             int resposta = conexao.getResponseCode();
             if (resposta == HttpURLConnection.HTTP_OK || resposta == HttpURLConnection.HTTP_CREATED) {
@@ -95,6 +95,22 @@ public class ProdutoHttp {
 //            listadeProduto.add(prod);
 //        }
         return listadeProduto;
+    }
+
+
+    private static String  carregaUrl(){
+        Properties properties = new Properties();
+        try
+        {
+            FileInputStream fis = new  FileInputStream("/mnt/sdcard/configuracao.properties");
+            properties.load(fis);
+            return properties.getProperty("conf.Url");
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+            return "";
+        }
     }
 
     private static String bytesParaString(InputStream is) throws IOException {
